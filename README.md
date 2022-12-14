@@ -1,8 +1,11 @@
-## Latex source code for Resume
+## Latex source code for Row wise resume
 
-### To compile the resume
+1. To compile the resume
 
 ```bash
 $ pdflatex resume.tex 
 ```
-Output would be `main.pdf`
+2. Output would be `main.pdf`
+
+### Credits
+[Resume Template Borrowed from Aras Gungore](https://github.com/arasgungore/arasgungore-CV)

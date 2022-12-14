@@ -7,6 +7,7 @@
 
 \documentclass[letterpaper,11pt]{article}
 
+
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -21,6 +22,29 @@
 \usepackage{hyphenat}
 \usepackage{fontawesome}
 \input{glyphtounicode}
+
+\usepackage{tikz}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
 
 
 %---------- FONT OPTIONS ----------
@@ -80,7 +104,6 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-
 \newcommand{\resumeSubSubheading}[2]{
     \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -89,12 +112,11 @@
 }
 
 
-\newcommand{\resumeEducationHeading}[6]{
+\newcommand{\resumeEducationHeading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    %   \textit{\small#5} & \textit{\small #6} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -143,8 +165,11 @@
     $|$
     \faGithub \hspace{.5pt} \href{https://github.com/UditSinghParihar}{GitHub}
     $|$
-    \faGlobe \hspace{.5pt} \href{https://scholar.google.co.in/citations?user=fUeIp1EAAAAJ&hl=en}{Portfolio}
+    % \fa command for google scholar
+    \faGraduationCap \hspace{.5pt} \href{https://scholar.google.co.in/citations?user=fUeIp1EAAAAJ&hl=en}{Google Scholar}
     $|$
+    % \faGlobe \hspace{.5pt} \href{https://scholar.google.co.in/citations?user=fUeIp1EAAAAJ&hl=en}{Portfolio}
+    % $|$
     \faMapMarker \hspace{.5pt} {Bangalore, India}
 \end{center}
 
@@ -157,19 +182,13 @@
   \resumeSubHeadingListStart
     
     \resumeEducationHeading
-      {International Institute of Information Technology
-      % \normalfont{(Admission rate: 0.09\%)}
-      }{ Hyderabad, India}
+      {International Institute of Information Technology}
+      {Hyderabad, India}
       {MS By Research Computer Science;   \textbf{GPA: 8.67/10.00}}{2019 \textbf{--} 2021}
-      {Minor Degree in Computer Engineering;   \textbf{GPA: 3.89/4.00}}{2014 \textbf{--} 2018}
-        % \resumeItemListStart
-            % \resumeItem{\textbf{Relevant coursework:} Calculus I-II, Matrix Theory, Differential Equations, Materials Science, Electrical Circuits I-II, Digital System Design, Numerical Methods, Probability Theory, Electronics I-II, Signals and Systems, Electromagnetic Field Theory, Energy Conversion, System Dynamics and Control, Communication Engineering}
-        % \resumeItemListEnd
     
     \resumeSubheading
-      {Indian Institute of Technology
-      % \normalfont{(Admission rate: 0.85\%)}
-      }{ Jodhpur, India}
+      {Indian Institute of Technology}
+      { Jodhpur, India}
       {B. Tech Mechanical Engineering;   \textbf{GPA: 7.1/10.0}}{2014 \textbf{--} 2018}
     
   \resumeSubHeadingListEnd
@@ -177,33 +196,29 @@
 
 
 %----------- RESEARCH PUBLICATIONS -----------
-
-\section{Research Experience}
+\section{Research Publications}
   \vspace{3pt}
-  \resumeSubHeadingListStart
-  
-    \resumeSubheading
-      {Max Planck Institute for Intelligent Systems}{Stuttgart, Baden\textbf{-}Württemberg, Germany}
-      {Undergraduate Research Assistant}{Jun 2022 \textbf{--} Aug 2022}
-        \resumeItemListStart
-            \resumeItem{Worked in the Physical Intelligence Department with Sinan Özgün Demir and Alp Can Karacakol on a project about 3D printing and heat-assisted magnetic programming of soft machines.}
-            \resumeItem{Updated a ROS package for converting 3D motion controller events to ROS messages so that it synchronously operates at any given loop rate.}
-            \resumeItem{Implemented an Arduino Mega driver for controlling a fluid dispenser, a laser, thermocouples, and a coil set. Updated ROS nodes for parsing G-codes and controlling stage movement and built the ROS-Arduino communication network to simulate a 3D printing and magnetic programming process.}
-        \resumeItemListEnd
-    
-    \resumeSubheading
-      {Nanonetworking Research Group, Boğaziçi University}{Istanbul, Turkey}
-      {Undergraduate Research Assistant}{Oct 2021 \textbf{--} Present}
-        \resumeItemListStart
-            \resumeItem{Currently working with Assoc. Prof. Ali Emre Pusane on the project “Design and Implementation of Molecular Communication Systems Using Index Modulation” under the TÜBİTAK 2247-C Intern Researcher Scholarship Program (STAR).}
-            \resumeItem{Simulated the Brownian motion of molecules in a SISO MCvD system and predicted simulation parameters such as receiver radius, diffusion coefficient, and transmitter-receiver distance using CNNs with Python.}
-            \resumeItem{Plotted the arrival of molecules per symbol duration in a SISO MCvD system using Binomial, Poisson, and Gaussian model approximations with MATLAB.}
-            \resumeItem{Ran Monte Carlo simulations of the Gaussian model to encode/decode randomized binary sequences in a SISO MCvD system using BCSK modulation technique and calculated the bit error rate (BER) on Z-channel.}
-        \resumeItemListEnd
-    
-  \resumeSubHeadingListEnd
+\begin{enumerate}
 
 
+  \item \textbf{\href{https://arxiv.org/abs/2211.04557}{Estimation of Appearance and Occupancy Information in Bird's Eye View from Surround Monocular Images }}\ExternalLink\\
+  \textit{\small{International Conference on Robotics and Automation (ICRA), Autonomy 2.0, \textbf{2022}}}\\
+  \textit{\small{Sarthak Sharma, Unnikrishnan R. Nair, \textbf{Udit Singh Parihar} , Midhun Menon S and Srikanth Vidapanakal}}\\
+
+  \item \textbf{\href{https://arxiv.org/abs/2103.08573}{RoRD: Rotation-Robust Descriptors and Orthographic Views for Local Feature Matching}} \ExternalLink \\
+  \textit{\small{International Conference on Intelligent Robots and Systems (IROS), \textbf{2021}}}\\
+  \textit{\small{\textbf{Udit Singh Parihar}$^*$, Aniket Gujarathi$^*$, Kinal Mehta$^*$, Satyajit Tourani$^*$, Sourav Garg,  Michael Milford and K. Madhava Krishna}}\\
+
+  \item \textbf{\href{https://arxiv.org/abs/2010.01421}{Early Bird: Loop Closures from Opposing Viewpoints for Perceptually-Aliased Indoor Environments}} \ExternalLink \\
+  \textit{\small{International Conference on Computer Vision Theory and Applications (VISAPP), \textbf{2021}}}\\
+  \textit{\small{Satyajit Tourani$^*$, Dhagash Desai$^*$, \textbf{Udit Singh Parihar}$^*$, Sourav Garg, Ravi Kiran Sarvadevabhatla, Michael Milford and K. Madhava Krishna}}\\
+
+  \item \textbf{\href{https://arxiv.org/abs/2002.06575}{Topological Mapping for Manhattan-like Repetitive Environments}} \ExternalLink \\
+  \textit{\small{International Conference on Robotics and Automation  (ICRA), \textbf{2020}}}\\
+  \textit{\small{Sai Shubodh Puligilla$^*$ , Satyajit Tourani$^*$ , Tushar Vaidya$^*$ , \textbf{Udit Singh Parihar}$^*$ , Ravi Kiran Sarvadevabhatla and K. Madhava Krishna}}\\
+
+\end{enumerate} 
+    
 
 %----------- WORK EXPERIENCE -----------
 
