@@ -1,11 +1,11 @@
-## Latex source code for Row wise resume
+## Latex code for Research Resume
 
 1. To compile the resume
 
 ```bash
-$ pdflatex resume.tex 
+$ pdflatex main.tex 
 ```
 2. Output would be `main.pdf`
 
 ### Credits
-[Resume Template Borrowed from Aras Gungore](https://github.com/arasgungore/arasgungore-CV)
+1. Resume Template Borrowed from [Aras Gungore](https://github.com/arasgungore/arasgungore-CV)
