@@ -209,69 +209,78 @@
 		
 	\resumeSubHeadingListEnd
 
-
-
-%----------- RESEARCH PUBLICATIONS -----------
-\section{Research Publications}
-	\vspace{3pt}
-\begin{enumerate}
-
-
-	\item \textbf{\href{https://arxiv.org/abs/2211.04557}{Estimation of Appearance and Occupancy Information in Bird's Eye View from Surround Monocular Images }}\ExternalLink\\
-	\textit{\small{International Conference on Robotics and Automation (ICRA), Autonomy 2.0, \textbf{2022}}}\\
-	\textit{\small{Sarthak Sharma, Unnikrishnan R. Nair, \textbf{Udit Singh Parihar} , Midhun Menon S and Srikanth Vidapanakal}}\\
-
-	\item \textbf{\href{https://arxiv.org/abs/2103.08573}{RoRD: Rotation-Robust Descriptors and Orthographic Views for Local Feature Matching}} \ExternalLink \\
-	\textit{\small{International Conference on Intelligent Robots and Systems (IROS), \textbf{2021}}}\\
-	\textit{\small{\textbf{Udit Singh Parihar}$^*$, Aniket Gujarathi$^*$, Kinal Mehta$^*$, Satyajit Tourani$^*$, Sourav Garg,  Michael Milford and K. Madhava Krishna}}\\
-
-	\item \textbf{\href{https://arxiv.org/abs/2010.01421}{Early Bird: Loop Closures from Opposing Viewpoints for Perceptually-Aliased Indoor Environments}} \ExternalLink \\
-	\textit{\small{International Conference on Computer Vision Theory and Applications (VISAPP), \textbf{2021}}}\\
-	\textit{\small{Satyajit Tourani$^*$, Dhagash Desai$^*$, \textbf{Udit Singh Parihar}$^*$, Sourav Garg, Ravi Kiran Sarvadevabhatla, Michael Milford and K. Madhava Krishna}}\\
-
-	\item \textbf{\href{https://arxiv.org/abs/2002.06575}{Topological Mapping for Manhattan-like Repetitive Environments}} \ExternalLink \\
-	\textit{\small{International Conference on Robotics and Automation  (ICRA), \textbf{2020}}}\\
-	\textit{\small{Sai Shubodh Puligilla$^*$ , Satyajit Tourani$^*$ , Tushar Vaidya$^*$ , \textbf{Udit Singh Parihar}$^*$ , Ravi Kiran Sarvadevabhatla and K. Madhava Krishna}}\\
-
-\end{enumerate} 
-		
-
 %----------- WORK EXPERIENCE -----------
 
 \section{Work Experience}
 	\vspace{3pt}
 	\resumeSubHeadingListStart
-		
+		\resumeWorkSubheading
+			{Qualcomm}{Bangalore, India}
+			{Computer Vision, DL and SLAM Research Engineer}{July 2023 \textbf{--} Present}
+				\resumeItemListStart
+					\textbf{Improving Qualcomm and Google AndroidXR 6DoF SLAM system:} \vspace{-2px}
+					\resumeItem{Debugged and contributed to C++ codebase maintained by team of 40 engineers in Qualcomm and Google}
+					\resumeItem{Brought down 6DoF accuracy under 5 mm and improvement of 50\% in low texture and HDR scenarios}
+					\resumeItem{Made key contribution to detection, stereo triangulation and tracking in VIO}
+					\vspace{7px}
+
+					\textbf{Ground truthing system for Visual Inertial Odometry (VIO):} \vspace{-2px}
+					\resumeItem{Bring up a mechanically constrained hardware solution for determining accuracy of VIO system}
+					\resumeItem{Developed a multi checkerboard setup to estimate the multi camera and IMU pose}
+					\resumeItem{Initiated and developed pipeline to use total station for calculating accuracy of VIO system}
+					\vspace{7px}
+
+					\textbf{Fusing IMU with Camera based deep feature matching (Patent submission):} \vspace{-2px}
+					\resumeItem{First in literature to integrate IMU with camera based deep feature matching}
+					\resumeItem{Solves the problem of matching in low texture environment, high rotation changes}
+					\resumeItem{IMU guided optical flow and occlusion modeling}
+					\vspace{7px}
+				\resumeItemListEnd 
+
 		\resumeWorkSubheading
 			{OLA Electric}{Bangalore, India}
-			{Computer Vision and SLAM Research Engineer}{Aug 2021 \textbf{--} Present}      
+			{Computer Vision, DL and SLAM Research Engineer}{July 2021 \textbf{--} July 2023}      
 				\resumeItemListStart 
-						\textbf{Autonomous agent development:} \vspace{-2px}
-						\resumeItem{Developed an end to end autonomous driving agent using cameras, GPS and IMU sensors}
-						\resumeItem{Ported the agent from Carla simulator to NuScenes Dataset}
-						\resumeItem{Converted the pytorch model to TensorRT and developed a ROS wrapper to run on real Mahindra E2O car achieving final control prediction at 25 HZ, in a zero shot paradigm}
-						\vspace{7px}
-		
-						\textbf{Lidar based mapping and localization:} \vspace{-2px}
-						\resumeItem{Extended the Lidar based SLAM LeGO-LOAM for the Ouster lidars and ported ROS1 to ROS2 in C++}
-						\resumeItem{Calibrated the Lidar and IMU/GNSS sensors for extrinsic calibration}
-						\vspace{7px}
+					\textbf{Autonomous agent development:} \vspace{-2px}
+					\resumeItem{Developed an end to end autonomous driving agent using cameras, GPS and IMU sensors}
+					\resumeItem{Ported the agent from Carla simulator to NuScenes Dataset}
+					\resumeItem{Converted the pytorch model to TensorRT and developed a ROS wrapper to run on real Mahindra E2O car achieving final control prediction at 25 HZ, in a zero shot paradigm}
+					\vspace{7px}
+	
+					\textbf{Lidar based mapping and localization:} \vspace{-2px}
+					\resumeItem{Extended the Lidar based SLAM LeGO-LOAM for the Ouster lidars and ported ROS1 to ROS2 in C++}
+					\resumeItem{Calibrated the Lidar and IMU/GNSS sensors for extrinsic calibration}
+					\vspace{7px}
 
-						\textbf{Kaggle Image Matching Challenge:} \vspace{-2px}
-						\resumeItem{Won the silver medal in the Kaggle Image Matching Challenge 2022}
-						\resumeItem{Developed an Ensemble of Deep feature matching algorithm of SuperGlue and LoFTR}
-						\vspace{7px}
-
-						\textbf{Development of Self Supervised Monocular Depth Estimation Network:} \vspace{-2px}
-						\resumeItem{Trained PackNet-SfM on indian driving dataset and on Carla simulator dataset}
-						\resumeItem{Converted the pytorch model to TensorRT to achienved 28 FPS and developed a ROS wrapper around the model}
-						\vspace{7px}
-
+					\textbf{Kaggle Image Matching Challenge:} \vspace{-2px}
+					\resumeItem{Won the silver medal in the Kaggle Image Matching Challenge 2022}
+					\resumeItem{Developed an Ensemble of Deep feature matching algorithm of SuperGlue and LoFTR}
+					\vspace{7px}
 				\resumeItemListEnd
-		
 	\resumeSubHeadingListEnd
 
+%----------- RESEARCH PUBLICATIONS -----------
+\section{Research Publications}
+	\vspace{3pt}
+\begin{enumerate}
+	\item \textbf{\href{https://arxiv.org/abs/2211.04557}{Estimation of Appearance and Occupancy Information in Bird's Eye View from Surround Monocular Images }}\ExternalLink $|$ \emph{OLA Electric}\\
+	\textit{\small{International Conference on Robotics and Automation (ICRA), Autonomy 2.0, \textbf{2022}}}\\
+	\textit{\small{Sarthak Sharma, Unnikrishnan R. Nair, \textbf{Udit Singh Parihar} , Midhun Menon S and Srikanth Vidapanakal}}\\
 
+	\item \textbf{\href{https://arxiv.org/abs/2103.08573}{RoRD: Rotation-Robust Descriptors and Orthographic Views for Local Feature Matching}} \ExternalLink $|$ \emph{IIITH}\\
+	\textit{\small{International Conference on Intelligent Robots and Systems (IROS), \textbf{2021}}}\\
+	\textit{\small{\textbf{Udit Singh Parihar}$^*$, Aniket Gujarathi$^*$, Kinal Mehta$^*$, Satyajit Tourani$^*$, Sourav Garg,  Michael Milford and K. Madhava Krishna}}\\
+
+	\item \textbf{\href{https://arxiv.org/abs/2010.01421}{Early Bird: Loop Closures from Opposing Viewpoints for Perceptually-Aliased Indoor Environments}} \ExternalLink $|$ \emph{IIITH}\\
+	\textit{\small{International Conference on Computer Vision Theory and Applications (VISAPP), \textbf{2021}}}\\
+	\textit{\small{Satyajit Tourani$^*$, Dhagash Desai$^*$, \textbf{Udit Singh Parihar}$^*$, Sourav Garg, Ravi Kiran Sarvadevabhatla, Michael Milford and K. Madhava Krishna}}\\
+
+	\item \textbf{\href{https://arxiv.org/abs/2002.06575}{Topological Mapping for Manhattan-like Repetitive Environments}} \ExternalLink $|$ \emph{IIITH}\\
+	\textit{\small{International Conference on Robotics and Automation  (ICRA), \textbf{2020}}}\\
+	\textit{\small{Sai Shubodh Puligilla$^*$ , Satyajit Tourani$^*$ , Tushar Vaidya$^*$ , \textbf{Udit Singh Parihar}$^*$ , Ravi Kiran Sarvadevabhatla and K. Madhava Krishna}}\\
+
+\end{enumerate} 
+		
 %----------- PROJECTS -----------
 
 \section{Projects}
