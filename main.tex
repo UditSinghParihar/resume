@@ -218,24 +218,29 @@
 			{Qualcomm}{Bangalore, India}
 			{Computer Vision, DL and SLAM Research Engineer}{July 2023 \textbf{--} Present}
 				\resumeItemListStart
-					\textbf{Improving Qualcomm and Google AndroidXR 6DoF SLAM system:} \vspace{-2px}
-					\resumeItem{Improved 6DoF head tracking system which is part of AndroidXR in the key areas of pose estimation, stereo triangulation, and tracking}
-					\resumeItem{Achieved latency under 20 ms and very low power requirements for the 6DoF SLAM system}
-					\resumeItem{Brought down 6DoF accuracy under 5 mm and improvement of 50\% in low texture and HDR scenarios}
-					\vspace{7px}
+				\textbf{Multi-camera Visual-Inertial SLAM (shipped in Google AndroidXR \& Samsung Moohan):} \vspace{-2px}
+				\resumeItem{Designed architecture for multi-camera support in 6DoF Visual-Inertial SLAM; integrated multi-camera constraints into tracker and pose graph optimizer, improving robustness and accuracy by 2$\times$}
+				\resumeItem{Simplified pose graph optimizer by removing redundant nodes and leveraging camera extrinsics}
+				\vspace{7px}
 
-					\textbf{Fusing IMU with Camera based deep feature matching (2 Patents submitted):} \vspace{-2px}
-					\resumeItem{First in literature to integrate vision based transformer architecture with IMU priors for tracking}
-					\resumeItem{Solves the problem of feature matching in low texture environment, high rotation changes}
-					\resumeItem{Proposed uncertainty estimation of a deep learning based feature matching pipeline which is fused in downstream task for EKF state estimation}
-					\vspace{7px}
-					
-					\textbf{Ground truthing system for Visual Inertial Odometry (VIO):} \vspace{-2px}
-					\resumeItem{Bring up a mechanically constrained hardware solution for determining accuracy of VIO system}
-					\resumeItem{Developed a multi checkerboard setup to estimate the multi camera and IMU pose}
-					\resumeItem{Initiated and developed pipeline to use total station for calculating accuracy of VIO system}
-					\vspace{7px}
-				\resumeItemListEnd 
+				\textbf{Patents (6 Accepted) -- Deep Learning \& SLAM:} \vspace{-2px}
+				\resumeItem{\textbf{\textit{Hybrid Classical-DL Feature Tracking:}} Combining CV tracking with DL-based feature matching using IMU priors for lower power and higher accuracy in Visual-Inertial SLAM}
+				\resumeItem{\textbf{\textit{VLM Semantic Priors for SLAM Perception:}} Incorporating semantic and user-context information from Vision-Language Models into SLAM perception for improved accuracy and power efficiency}
+				\resumeItem{\textbf{\textit{Illumination-Robust Feature Matching:}} Fusing IMU and DL-based feature matching to handle scene lighting changes when patch descriptors fail under varying illumination}
+				%\resumeItem{\textit{Map Feature Embeddings and Joint Multi-Camera Tracker:} Incremental VI-SLAM with real-time sparse scene representation and joint tracking across all cameras using IMU priors}
+				\resumeItem{\textbf{\textit{Uncertainty-Aware Feature Matching for Pose Estimation:}} Dual-head network predicting correspondences and matching uncertainties jointly; uncertainty fused into EKF-based pose estimation for reduced latency and power}
+				\vspace{7px}
+
+				\textbf{Visual-Inertial Odometry Optimizations:} \vspace{-2px}
+				\resumeItem{Studied IMU intrinsic calibration and camera-IMU clock offset in EKF-based VIO; concluded both can be removed from the state vector, saving latency and power — validated over 15 datasets $\times$ 5 runs each}
+				\resumeItem{Identified suboptimal Hermite spline representation of camera distortion; derived analytical closed-form warping matrix, reducing projection function calls in the highest power hotspot}
+				\vspace{7px}
+
+				\textbf{Ground-Truth Infrastructure for 6DoF Accuracy Evaluation:} \vspace{-2px}
+				\resumeItem{Built a mechanically constrained setup for ground-truth pose collection in scenarios where motion capture is unavailable; integrated into CI pipeline for continuous accuracy validation}
+				\resumeItem{Designed 360$^\circ$-spanning 4-ChArUco board rig with unique markers, achieving sub-mm circle-fit accuracy for drift estimation in outdoor HDR and moving-shadow scenarios}
+				\vspace{7px}
+			\resumeItemListEnd 
 
 		\resumeWorkSubheading
 			{OLA Electric}{Bangalore, India}
@@ -280,7 +285,8 @@
 	\textit{\small{Sai Shubodh Puligilla$^*$ , Satyajit Tourani$^*$ , Tushar Vaidya$^*$ , \textbf{Udit Singh Parihar}$^*$ , Ravi Kiran Sarvadevabhatla and K. Madhava Krishna}}\\
 
 \end{enumerate} 
-		
+
+
 %----------- PROJECTS -----------
 
 \section{Projects}
