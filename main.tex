@@ -219,21 +219,21 @@
 			{Computer Vision, DL and SLAM Research Engineer}{July 2023 \textbf{--} Present}
 				\resumeItemListStart
 					\textbf{Improving Qualcomm and Google AndroidXR 6DoF SLAM system:} \vspace{-2px}
-					\resumeItem{Debugged and contributed to C++ codebase maintained by team of 40 engineers in Qualcomm and Google}
+					\resumeItem{Improved 6DoF head tracking system which is part of AndroidXR in the key areas of pose estimation, stereo triangulation, and tracking}
+					\resumeItem{Achieved latency under 20 ms and very low power requirements for the 6DoF SLAM system}
 					\resumeItem{Brought down 6DoF accuracy under 5 mm and improvement of 50\% in low texture and HDR scenarios}
-					\resumeItem{Made key contribution to detection, stereo triangulation and tracking in VIO}
 					\vspace{7px}
 
+					\textbf{Fusing IMU with Camera based deep feature matching (2 Patents submitted):} \vspace{-2px}
+					\resumeItem{First in literature to integrate vision based transformer architecture with IMU priors for tracking}
+					\resumeItem{Solves the problem of feature matching in low texture environment, high rotation changes}
+					\resumeItem{Proposed uncertainty estimation of a deep learning based feature matching pipeline which is fused in downstream task for EKF state estimation}
+					\vspace{7px}
+					
 					\textbf{Ground truthing system for Visual Inertial Odometry (VIO):} \vspace{-2px}
 					\resumeItem{Bring up a mechanically constrained hardware solution for determining accuracy of VIO system}
 					\resumeItem{Developed a multi checkerboard setup to estimate the multi camera and IMU pose}
 					\resumeItem{Initiated and developed pipeline to use total station for calculating accuracy of VIO system}
-					\vspace{7px}
-
-					\textbf{Fusing IMU with Camera based deep feature matching (Patent submission):} \vspace{-2px}
-					\resumeItem{First in literature to integrate IMU with camera based deep feature matching}
-					\resumeItem{Solves the problem of matching in low texture environment, high rotation changes}
-					\resumeItem{IMU guided optical flow and occlusion modeling}
 					\vspace{7px}
 				\resumeItemListEnd 
 
@@ -244,7 +244,7 @@
 					\textbf{Autonomous agent development:} \vspace{-2px}
 					\resumeItem{Developed multimodal network to predict Semantic occupancy grid and drivable waypoints directly from camera and GPS Coordinate}
 					\resumeItem{Develped simulation in loop and hardware in loop testing for the autonomous agent}
-					\resumeItem{Converted the pytorch model to TensorRT and developed a ROS wrapper to run on real Mahindra E2O car achieving final control prediction at 25 HZ, in a zero shot paradigm}
+					\resumeItem{Converted the pytorch model to TensorRT and developed a ROS wrapper to deploy on Mahindra E2O car achieving final control prediction at 25 HZ, in a zero shot paradigm}
 					\vspace{7px}
 	
 					\textbf{Lidar based mapping and localization:} \vspace{-2px}
@@ -372,7 +372,7 @@
 		\small{\item{
 				\textbf{Programming:}{ C++, Python, C, MATLAB} \\ \vspace{3pt}
 				
-				\textbf{Libraries:}{ PyTorch, Keras, CUDA, ROS1/ROS2, G2O, GTSAM, TensorRT} \\ \vspace{3pt}
+				\textbf{Libraries:}{ PyTorch, Keras, CUDA, TensorRT, ROS1/ROS2, Ceres, GTSAM} \\ \vspace{3pt}
 				
 				% \textbf{Languages:}{ Turkish (Native), English (Professional), German (Elementary)}
 				
