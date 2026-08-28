@@ -214,33 +214,34 @@
 \section{Work Experience}
 	\vspace{3pt}
 	\resumeSubHeadingListStart
-		\resumeWorkSubheading
-			{Qualcomm}{Bangalore, India}
-			{Computer Vision, DL and SLAM Research Engineer}{July 2023 \textbf{--} Present}
-				\resumeItemListStart
-				\textbf{Multi-camera Visual-Inertial SLAM (shipped in Google AndroidXR \& Samsung Moohan):} \vspace{-2px}
-				\resumeItem{Designed architecture for multi-camera support in 6DoF Visual-Inertial SLAM; integrated multi-camera constraints into tracker and pose graph optimizer, improving robustness and accuracy by 2$\times$}
-				\resumeItem{Simplified pose graph optimizer by removing redundant nodes and leveraging camera extrinsics}
-				\vspace{7px}
+			\resumeWorkSubheading
+				{Qualcomm}{Bangalore, India}
+				{Computer Vision, DL and SLAM Research Engineer}{July 2023 \textbf{--} Present}
+					\resumeItemListStart
+					\textbf{Multi-camera Vision 3DoF Head Tracking (shipped in Google AndroidXR, Samsung Moohan \& XREAL Aura):} \vspace{-2px}
+					\resumeItem{Architected multi-camera support in tracker and pose graph optimizer, doubling robustness, RMSE, jitter KPIs; implemented in multi-threaded C++ with tight memory management to hold the real-time budget}
+					\resumeItem{Reformulated the pose graph optimizer to solve only independent variables, halving state and cutting latency 30\%}
+					\resumeItem{Root-caused content drift for users in moving vehicles; fixed and merged at Google in 3 weeks, unblocking OTA}
+					\resumeItem{Corrected the covariance propagation formulation, tightening correlation between covariance and true error}
+					\vspace{7px}
 
-				\textbf{Patents (6 Accepted) -- Deep Learning \& SLAM:} \vspace{-2px}
-				\resumeItem{\textbf{\textit{Hybrid Classical-DL Feature Tracking:}} Combining CV tracking with DL-based feature matching using IMU priors for lower power and higher accuracy in Visual-Inertial SLAM}
-				\resumeItem{\textbf{\textit{VLM Semantic Priors for SLAM Perception:}} Incorporating semantic and user-context information from Vision-Language Models into SLAM perception for improved accuracy and power efficiency}
-				\resumeItem{\textbf{\textit{Illumination-Robust Feature Matching:}} Fusing IMU and DL-based feature matching to handle scene lighting changes when patch descriptors fail under varying illumination}
-				%\resumeItem{\textit{Map Feature Embeddings and Joint Multi-Camera Tracker:} Incremental VI-SLAM with real-time sparse scene representation and joint tracking across all cameras using IMU priors}
-				\resumeItem{\textbf{\textit{Uncertainty-Aware Feature Matching for Pose Estimation:}} Dual-head network predicting correspondences and matching uncertainties jointly; uncertainty fused into EKF-based pose estimation for reduced latency and power}
-				\vspace{7px}
+					\textbf{Patents (9 Accepted) -- Deep Learning \& SLAM:} \vspace{-2px}
+					\resumeItem{\textbf{\textit{Perception under scene change (shipped in AndroidXR):}} Depth, feature-consistency and IMU motion-compensation methods for users on moving platforms; reset-decision metric and DL matching under illumination change}
+					\resumeItem{\textbf{\textit{Deep feature matching:}} Hybrid classical-DL tracking with IMU priors; adaptive low-compute matcher with server offload; dual-head network predicting correspondences and uncertainty, fused into EKF pose estimation}
+					\resumeItem{\textbf{\textit{Scene-aware SLAM:}} VLM semantic and user-context priors to adaptively configure SLAM perception; deterministic-power head tracking via multi-map vision-IMU fusion with rotation-only map merging}
+					\vspace{7px}
 
-				\textbf{Visual-Inertial Odometry Optimizations:} \vspace{-2px}
-				\resumeItem{Studied IMU intrinsic calibration and camera-IMU clock offset in EKF-based VIO; concluded both can be removed from the state vector, saving latency and power — validated over 15 datasets $\times$ 5 runs each}
-				\resumeItem{Identified suboptimal Hermite spline representation of camera distortion; derived analytical closed-form warping matrix, reducing projection function calls in the highest power hotspot}
-				\vspace{7px}
+					\textbf{Visual-Inertial Odometry Optimizations:} \vspace{-2px}
+					\resumeItem{Showed IMU intrinsics and camera-IMU clock offset can be dropped from the EKF-based VIO state vector, saving latency and power, validated over 15 datasets}
+					\resumeItem{Replaced a Hermite spline distortion model with a closed-form warping matrix, cutting the top power hotspot}
+					\vspace{7px}
 
-				\textbf{Ground-Truth Infrastructure for 6DoF Accuracy Evaluation:} \vspace{-2px}
-				\resumeItem{Built a mechanically constrained setup for ground-truth pose collection in scenarios where motion capture is unavailable; integrated into CI pipeline for continuous accuracy validation}
-				\resumeItem{Designed 360$^\circ$-spanning 4-ChArUco board rig with unique markers, achieving sub-mm circle-fit accuracy for drift estimation in outdoor HDR and moving-shadow scenarios}
-				\vspace{7px}
-			\resumeItemListEnd 
+					\textbf{Deep Feature Matching, Chip Spec \& Evaluation Infrastructure:} \vspace{-2px}
+					\resumeItem{Swept 72 sensor and compute configurations to define the minimum viable chip spec for a next-generation XR device (768$\times$768, 132$^\circ$ FOV, 2 Hz, 800 features) at 1$^\circ$ RMSE}
+					\resumeItem{Traced a 50\% frame-failure rate at reduced camera FOV to descriptor and matching quality, and showed recovery with DL matchers benchmarked over 14 datasets $\times$ 10 methods}
+					\resumeItem{Built a mechanically constrained 4-ChArUco rig for sub-mm ground-truth pose collection where motion capture is unavailable; integrated into CI}
+					\vspace{7px}
+				\resumeItemListEnd 
 
 		\resumeWorkSubheading
 			{OLA Electric}{Bangalore, India}
